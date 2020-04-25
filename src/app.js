@@ -26,14 +26,15 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about', {
-    title: 'About Page',
+    title: 'About me',
     name: 'Aryan Agarwal',
   })
 })
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    title: 'Help Page',
+    helpText: 'This is some helpful text.',
+    title: 'Help',
     name: 'Aryan Agarwal',
   })
 })
@@ -47,7 +48,10 @@ app.get('/help/*', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
-  res.send('Your Weather')
+  res.send({
+    forecast: 'It is snowing',
+    location: 'Philadelphia',
+  })
 })
 
 app.get('*', (req, res) => {
@@ -59,5 +63,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(3000, () => {
-  console.log('App server started')
+  console.log('App server running on 3000')
 })
