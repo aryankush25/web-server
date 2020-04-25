@@ -38,8 +38,24 @@ app.get('/help', (req, res) => {
   })
 })
 
+app.get('/help/*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Aryan Agarwal',
+    errorMessage: 'Help not found',
+  })
+})
+
 app.get('/weather', (req, res) => {
   res.send('Your Weather')
+})
+
+app.get('*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Aryan Agarwal',
+    errorMessage: 'Page not found',
+  })
 })
 
 app.listen(3000, () => {
