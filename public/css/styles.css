@@ -40,3 +40,17 @@ header a {
 .portrait {
   width: 250px;
 }
+
+input {
+  padding: 8px;
+  border: 1px solid #cccccc;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid #888888;
+  background-color: #888888;
+  color: white;
+}
